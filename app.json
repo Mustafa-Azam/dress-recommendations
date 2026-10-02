@@ -35,6 +35,15 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
+      ],
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Dress Recommendations uses your photos so you can add clothes you've already photographed.",
+          "cameraPermission": "Dress Recommendations uses the camera to photograph your clothes and their care labels.",
+          "microphonePermission": false
+        }
       ]
     ],
     "experiments": {
