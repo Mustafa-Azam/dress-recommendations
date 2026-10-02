@@ -51,6 +51,23 @@ export function PrimaryButton({ label, onPress, disabled }: ButtonProps) {
   );
 }
 
+export function SecondaryButton({ label, onPress, disabled }: ButtonProps) {
+  const theme = useTheme();
+  return (
+    <Pressable
+      accessibilityRole="button"
+      disabled={disabled}
+      onPress={onPress}
+      style={({ pressed }) => [
+        styles.button,
+        { backgroundColor: theme.backgroundSelected },
+        (pressed || disabled) && styles.dimmed,
+      ]}>
+      <ThemedText type="smallBold">{label}</ThemedText>
+    </Pressable>
+  );
+}
+
 const styles = StyleSheet.create({
   card: {
     gap: Spacing.two,

@@ -9,14 +9,15 @@ Product plan: https://claude.ai/artifact/EPPgzYDrRnz7sx7LGgNwVm
 - [Expo](https://docs.expo.dev) SDK 57 with React Native and TypeScript
 - Expo Router for navigation, with native tabs (`src/app/`)
 - Data model for clothing, makeup, and profile in `src/types/wardrobe.ts`
+- Items are stored on the phone in SQLite (`expo-sqlite`), photos in the app's documents folder
 
 ## Screens
 
 | Tab | File | Status |
 | --- | --- | --- |
 | Today | `src/app/index.tsx` | Placeholder |
-| Catalog | `src/app/catalog.tsx` | Placeholder |
-| Scan | `src/app/scan.tsx` | Placeholder |
+| Catalog | `src/app/catalog.tsx` | Grid of saved items |
+| Scan | `src/app/scan.tsx` | Photo, color detection, details form, save |
 | Settings | `src/app/settings.tsx` | Placeholder |
 
 ## Run it
@@ -39,4 +40,5 @@ That requires an Apple Developer account.
 ```bash
 npm run typecheck
 npm run lint
+npm test
 ```
